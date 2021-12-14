@@ -1,0 +1,16 @@
+<svg id="dumbell" xmlns="http://www.w3.org/2000/svg" width="128.211" height="97.547" viewBox="0 0 128.211 97.547">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_1" data-name="Rectangle 1" class="cls-1" width="9.445" height="39.656" transform="translate(0 62.889) rotate(-30)"/>
+  <rect id="Rectangle_4" data-name="Rectangle 4" class="cls-1" width="9.445" height="39.656" transform="translate(128.211 34.658) rotate(150)"/>
+  <rect id="Rectangle_2" data-name="Rectangle 2" class="cls-1" width="9.445" height="53.652" transform="translate(6.726 50.926) rotate(-30)"/>
+  <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-1" width="9.445" height="53.652" transform="translate(121.486 46.622) rotate(150)"/>
+  <rect id="Rectangle_3" data-name="Rectangle 3" class="cls-1" width="9.445" height="67.649" transform="translate(13.452 38.962) rotate(-30)"/>
+  <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-1" width="9.331" height="70.84" transform="translate(94.931 24.242) rotate(60)"/>
+  <rect id="Rectangle_6" data-name="Rectangle 6" class="cls-1" width="9.445" height="67.649" transform="translate(114.76 58.585) rotate(150)"/>
+</svg>
