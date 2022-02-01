@@ -101,12 +101,25 @@ section {
     position: relative;
     width: 100%;
     height: 100vh;
-    
-    background: linear-gradient(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84)), url("../img/img-black-background.png");
+    background-image: url("../img/img-black-background.png");
+
+    /* opacity: 0.84; */
+    /* background: linear-gradient(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.84)), url("../img/img-black-background.png"); */
     border-radius: 0px 0px 1080px 0px;
     background-repeat: no-repeat;
     background-size: cover;
     
+}
+.bgnd-image {
+    background-color: black;
+    opacity: 0.84;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 1080px 0px;
+
+    
+
+
 }
 
 #content {
@@ -437,3 +450,8 @@ footer .logo {
 }
 
 
+
+@media screen and (min-width: 480px) {
+
+    
+}

@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
-    <title>Gymlog - Home</title>
+    
+    <title>Gymlog - Add exercise</title>
 </head>
 <body>
     <div id="main">
@@ -38,18 +39,23 @@
         </header>
         <section>
             <div id="div-for-content-1part">
-                <div class="white-background-content" id="app-home-page">
-                    <p id="welcome-title">Welcome in <span class="two-colors-text bold-text">GymLog</span></p>
-                    <p class="text">Welcome <span class="bold-text">Name Surname</span>!</p>
-                    <p class="text">Thanks for choosing <span class="two-colors-text bold-text">GymLog</span>.</p>
-                    <p class="text">To add your own training plans/workouts choose <span class="bold-text">Programs.</span><br>
-                    There you can also add your exercises, just go to <span class="bold-text"> Exercises</span> tab 
-                    and add your personalized exercises.</p>
-                    <p class="text"> Don't know how much weight to put on the bar? Don'n worry, just
-                    head to our <span class="bold-text"> 1 rep max calculator</span> and check how much you
-                    can do.</p>
-                    <p class="text"> Hope you will enjoy using our application.</p>
-                    <p id="signature"><span class="two-colors-text bold-text">GymLog</span> team</p>
+                <div class="white-background-content">
+                    <p id="welcome-title">Add exercise</p>
+                    <form class="add-form">
+                        <input class="user-data-input" name="exercise-name" type="text" placeholder="exercise name">
+                        <textarea name="exercise-description" class="textarea-description" placeholder="description"></textarea>
+                        <select class="minimal">
+                            <option>Select category</option>
+                            <option>Chest</option>
+                            <option>Back</option>
+                            <option>Legs</option>
+                            <option>Glutes</option>
+                          </select>
+            
+                    </form>
+                    <button class="red-app-btn">Add</button>
+                    
+
                 </div>
             </div>
             <div id="div-for-content-2part">
