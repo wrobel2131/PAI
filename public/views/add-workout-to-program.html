@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
-    <title>Gymlog - Home</title>
+    <script type="text/javascript" src="./public/js/script.js" defer></script>
+    <title>Gymlog - Add workout</title>
 </head>
 <body>
     <div id="main">
@@ -23,33 +24,30 @@
                     </li>
                     <li>
                         <i class="fas fa-clipboard-list fa-2x"></i>
-                        <a class="nav-li" href="">Programs</a>
+                        <a class="nav-li" href="/appPrograms">Programs</a>
                     </li>
                     <li>
                         <i class="fas fa-dumbbell fa-2x"></i>
-                        <a class="nav-li" href="">Exercises</a>
+                        <a class="nav-li" href="/appExercises">Exercises</a>
                     </li>
                     <li>
                         <i class="fas fa-calculator fa-2x"></i>
-                        <a class="nav-li" href="">1 Rep Max Calculator</a>
+                        <a class="nav-li" href="/appCalculator">1 Rep Max Calculator</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <section>
             <div id="div-for-content-1part">
-                <div class="white-background-content" id="app-home-page">
-                    <p id="welcome-title">Welcome in <span class="two-colors-text bold-text">GymLog</span></p>
-                    <p class="text">Welcome <span class="bold-text">Name Surname</span>!</p>
-                    <p class="text">Thanks for choosing <span class="two-colors-text bold-text">GymLog</span>.</p>
-                    <p class="text">To add your own training plans/workouts choose <span class="bold-text">Programs.</span><br>
-                    There you can also add your exercises, just go to <span class="bold-text"> Exercises</span> tab 
-                    and add your personalized exercises.</p>
-                    <p class="text"> Don't know how much weight to put on the bar? Don'n worry, just
-                    head to our <span class="bold-text"> 1 rep max calculator</span> and check how much you
-                    can do.</p>
-                    <p class="text"> Hope you will enjoy using our application.</p>
-                    <p id="signature"><span class="two-colors-text bold-text">GymLog</span> team</p>
+                <div class="white-background-content">
+                    <a href=""><i class="fas fa-arrow-left fa-3x"></i></a>
+                    <p id="welcome-title">Add workout</p>
+                    <form class="add-form">
+                        <input class="user-data-input" name="workout-name" type="text" placeholder="workout name">
+                    </form>
+                    <button class="red-app-btn">Add</button>
+                    
+
                 </div>
             </div>
             <div id="div-for-content-2part">
