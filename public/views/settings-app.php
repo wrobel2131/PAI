@@ -90,8 +90,8 @@ if(!isset($_COOKIE['user_id_for_cookie'])) {
                     <div id="user-photo-container">
                         <img src="public/img/person.jpeg" alt="">
                     </div>
-                    <span class="user-name-surname bold-text">Name Surname</span>
-                    <span id="user-email">email@email.com</span>
+                    <span class="user-name-surname bold-text"><?= $user->getName();?> <?= $user->getSurname();?></span>
+                    <span id="user-email"><?= $user->getEmail();?></span>
                 </div>
                 <div id="settings">
                     <div class="settings-element">
