@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="public/css/app-style.css" type="text/css">
     <script src="https://kit.fontawesome.com/311dc4d48f.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./public/js/navElementsColor.js" defer></script>
+    <script type="text/javascript" src="./public/js/addElement.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +53,7 @@ if(!isset($_COOKIE['user_id_for_cookie'])) {
             <div id="div-for-content-1part">
                 <p class="title">Exercises</p>
                 <div id="content-exercises-container">
-                    <div id="cross-exercises"></div>
+                    <div id="cross-exercises" onclick="addExercise()"></div>
                     <?php foreach ($exercises as $exercise):  ?>
                         <div class="exercise-container" id="<?= $exercise->getId(); ?>"><?= $exercise->getName(); ?></div>
                     <?php endforeach; ?>

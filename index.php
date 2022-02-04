@@ -21,7 +21,7 @@ Routing::get('exerciseInWorkout', 'DefaultController');
 Routing::get('addWorkout', 'DefaultController');
 Routing::get('addProgram', 'ProgramController');
 Routing::get('addExerciseToWorkout', 'DefaultController');
-Routing::get('addExercise', 'DefaultController');
+Routing::get('addExercise', 'ExerciseController');
 
 Routing::post('login', 'SecurityController');
 Routing::post('register', 'SecurityController');
@@ -29,6 +29,7 @@ Routing::post('logout', 'SecurityController');
 
 //Routing::post('settings', 'DefaultController');
 Routing::post('addProgram', 'ProgramController');
+Routing::post('addExercise', 'ExerciseController');
 
 Routing::post('addWorkoutToProgram', 'WorkoutController');
 
