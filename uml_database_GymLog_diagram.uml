@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercise_categories</OriginalElement>
+  <nodes>
+    <node x="221.25" y="663.5">0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercises_in_workouts</node>
+    <node x="376.2908163265306" y="436.0">0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.workouts</node>
+    <node x="-63.640306122448976" y="597.5918367346939">0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercise_logs</node>
+    <node x="60.25000000000003" y="414.0">0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercises</node>
+    <node x="388.47448979591843" y="233.75510204081633">0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.programs</node>
+    <node x="-209.20408163265304" y="284.89795918367344">0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercise_categories</node>
+    <node x="167.375" y="0.0">0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.users</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercises" target="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercise_categories" relationship="REFERENCES">
+      <point x="-48.25" y="-72.0" />
+      <point x="108.50000000000003" y="388.0" />
+      <point x="-108.20408163265304" y="388.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercises" target="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.users" relationship="REFERENCES">
+      <point x="48.25" y="-72.0" />
+      <point x="205.00000000000003" y="388.0" />
+      <point x="212.5" y="388.0" />
+      <point x="212.5" y="214.0" />
+      <point x="285.875" y="214.0" />
+      <point x="0.0" y="94.0" />
+    </edge>
+    <edge source="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.workouts" target="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.programs" relationship="REFERENCES">
+      <point x="0.0" y="-50.0" />
+      <point x="454.7908163265306" y="399.0" />
+      <point x="484.97448979591843" y="399.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercises_in_workouts" target="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercises" relationship="REFERENCES">
+      <point x="-56.75" y="-38.5" />
+      <point x="278.0" y="583.0" />
+      <point x="156.75000000000003" y="583.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercise_logs" target="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercises" relationship="REFERENCES">
+      <point x="0.0" y="-94.0" />
+      <point x="29.359693877551024" y="583.0" />
+      <point x="156.75000000000003" y="583.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.programs" target="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.users" relationship="REFERENCES">
+      <point x="0.0" y="-61.0" />
+      <point x="484.97448979591843" y="214.0" />
+      <point x="285.875" y="214.0" />
+      <point x="0.0" y="94.0" />
+    </edge>
+    <edge source="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercises_in_workouts" target="0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.workouts" relationship="REFERENCES">
+      <point x="56.75" y="-38.5" />
+      <point x="391.5" y="583.0" />
+      <point x="454.7908163265306" y="583.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.9607843137254902" showDependencies="false" x="226.5" y="398.0" />
+  <SelectedNodes>
+    <node>0eee8189-8ce8-4e38-8fe6-5772362a428a.TABLE:dfui1cd818qlsj.public.exercise_categories</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
