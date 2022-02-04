@@ -13,34 +13,38 @@
     <title>Gymlog - Add program</title>
 </head>
 
+
+
+<body>
+
 <?php
-if(!isset($_COOKIE['id'])) {
+if(!isset($_COOKIE['user_id_for_cookie'])) {
     $url = "http://$_SERVER[HTTP_HOST]";
     header("Location: {$url}/signIn");
 }
 ?>
 
-<body>
+
     <div id="main">
         <header>
-            <a href="#" class="logo-app"><img src="public/img/logo-app.svg" alt="logo-app"></a>
+            <a href="/home" class="logo-app"><img src="public/img/logo-app.svg" alt="logo-app"></a>
             <nav>
                 <ul>
                     <li>
                         <i class="fas fa-home fa-2x"></i>
-                        <a class="nav-li" href="#">Home</a>
+                        <a class="nav-li" href="/home">Home</a>
                     </li>
                     <li>
                         <i class="fas fa-clipboard-list fa-2x"></i>
-                        <a class="nav-li" href="/appPrograms">Programs</a>
+                        <a class="nav-li" href="/programs">Programs</a>
                     </li>
                     <li>
                         <i class="fas fa-dumbbell fa-2x"></i>
-                        <a class="nav-li" href="/appExercises">Exercises</a>
+                        <a class="nav-li" href="/exercises">Exercises</a>
                     </li>
                     <li>
                         <i class="fas fa-calculator fa-2x"></i>
-                        <a class="nav-li" href="/appCalculator">1 Rep Max Calculator</a>
+                        <a class="nav-li" href="/calculator">1 Rep Max Calculator</a>
                     </li>
                 </ul>
             </nav>
@@ -48,7 +52,7 @@ if(!isset($_COOKIE['id'])) {
         <section>
             <div id="div-for-content-1part">
                 <div class="white-background-content">
-                    <a href=""><i class="fas fa-arrow-left fa-3x"></i></a>
+                    <a href=""><i class="fas fa-arrow-left fa-3x" onclick=history.back();></i></a>
                     <p id="welcome-title">Add program</p>
                     <form class="add-form" method="POST" action="addProgram">
                         <input class="user-data-input" name="program-name" type="text" placeholder="program name">
@@ -66,8 +70,8 @@ if(!isset($_COOKIE['id'])) {
                     <div id="user-photo-container">
                         <img src="public/img/person.jpeg" alt="">
                     </div>
-                    <span class="user-name-surname bold-text">Name Surname</span>
-                    <span id="user-email">email@email.com</span>
+                    <span class="user-name-surname bold-text"><?= $user->getName();?> <?= $user->getSurname();?></span>
+                    <span id="user-email"><?= $user->getEmail();?></span>
                 </div>
                 <div id="settings">
                     <div class="settings-element">

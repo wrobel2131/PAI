@@ -13,34 +13,39 @@
     <title>Gymlog - Add exercise</title>
 </head>
 
+
+
+<body>
+
 <?php
-if(!isset($_COOKIE['id'])) {
+if(!isset($_COOKIE['user_id_for_cookie'])) {
     $url = "http://$_SERVER[HTTP_HOST]";
     header("Location: {$url}/signIn");
 }
 ?>
 
-<body>
+
+
     <div id="main">
         <header>
-            <a href="#" class="logo-app"><img src="public/img/logo-app.svg" alt="logo-app"></a>
+            <a href="/home" class="logo-app"><img src="public/img/logo-app.svg" alt="logo-app"></a>
             <nav>
                 <ul>
                     <li>
                         <i class="fas fa-home fa-2x"></i>
-                        <a class="nav-li" href="#">Home</a>
+                        <a class="nav-li" href="/home">Home</a>
                     </li>
                     <li>
                         <i class="fas fa-clipboard-list fa-2x"></i>
-                        <a class="nav-li" href="">Programs</a>
+                        <a class="nav-li" href="/programs">Programs</a>
                     </li>
                     <li>
                         <i class="fas fa-dumbbell fa-2x"></i>
-                        <a class="nav-li" href="">Exercises</a>
+                        <a class="nav-li" href="/exercises">Exercises</a>
                     </li>
                     <li>
                         <i class="fas fa-calculator fa-2x"></i>
-                        <a class="nav-li" href="">1 Rep Max Calculator</a>
+                        <a class="nav-li" href="/calculator">1 Rep Max Calculator</a>
                     </li>
                 </ul>
             </nav>
@@ -49,7 +54,7 @@ if(!isset($_COOKIE['id'])) {
             <div id="div-for-content-1part">
                 <div class="white-background-content">
                     <p id="welcome-title">Add exercise</p>
-                    <form class="add-form">
+                    <form class="add-form" method="POST" action="addExercise">
                         <input class="user-data-input" name="exercise-name" type="text" placeholder="exercise name">
                         <textarea name="exercise-description" class="textarea-description" placeholder="description"></textarea>
 <!--                        <select class="minimal">-->
@@ -59,7 +64,7 @@ if(!isset($_COOKIE['id'])) {
 <!--                            <option>Legs</option>-->
 <!--                            <option>Glutes</option>-->
 <!--                          </select>-->
-                        <button class="red-app-btn">Add</button>
+                        <button class="red-app-btn" type="submit">Add</button>
                     </form>
 
                     
@@ -71,8 +76,8 @@ if(!isset($_COOKIE['id'])) {
                     <div id="user-photo-container">
                         <img src="public/img/person.jpeg" alt="">
                     </div>
-                    <span class="user-name-surname bold-text">Name Surname</span>
-                    <span id="user-email">email@email.com</span>
+                    <span class="user-name-surname bold-text"><?= $user->getName();?> <?= $user->getSurname();?></span>
+                    <span id="user-email"><?= $user->getEmail();?></span>
                 </div>
                 <div id="settings">
                     <div class="settings-element">

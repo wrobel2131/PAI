@@ -8,7 +8,7 @@ class Exercise
     private $id_user;
 
 
-    public function __construct(string $name, string $description, int $id_user, $id = null)
+    public function __construct(string $name, string $description, int $id_user=null, $id = null)
     {
         $this->name = $name;
         $this->description = $description;

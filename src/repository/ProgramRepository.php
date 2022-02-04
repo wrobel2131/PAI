@@ -61,13 +61,13 @@ class ProgramRepository extends Repository
         ');
 
 
-        $id_user = 1; //pobrac id_usera na podstawie sesji/cookie
+        $id_user = $_COOKIE['user_id_for_cookie'];
+
 
         $statement->execute([
             $program->getName(),
             $program->getDescription(),
             $id_user
-//            $program->getId()
         ]);
     }
 }
