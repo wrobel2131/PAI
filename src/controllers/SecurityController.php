@@ -95,14 +95,13 @@
 
      public function logout()
      {
-//         echo "essa";
-//         http_response_code(200);
-//          var_dump("ESSAAAA");
-//            setcookie($this->nameCookie);
-         if (isset($_COOKIE[$this->nameCookie])) {
-             setcookie($this->nameCookie, time() -(60*60*24), '/');
-//             return $this->render('sign-in');
-         }
+//
+         setcookie($this->nameCookie, ' ' ,time() -(60*60*24), '/');
+         unset($_COOKIE[$this->nameCookie]);
+//         if (isset($_COOKIE[$this->nameCookie])) {
+//             setcookie($this->nameCookie, time() -(60*60*24), '/');
+////             return $this->render('sign-in');
+//         }
          return $this->render('sign-in');
 
      }

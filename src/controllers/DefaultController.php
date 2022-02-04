@@ -26,6 +26,14 @@ class DefaultController extends AppController {
 
     public function settings()
     {
+        if (!isset($_COOKIE[$this->nameCookie])) {
+            $this->render('sign-in');
+        }
+
+        $id_user = $_COOKIE[$this->nameCookie];
+
+
+        $user = $this->userRepository->getUserById($id_user);
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validateImage($_FILES['file'])) {
             move_uploaded_file(
                 $_FILES['file']['tmp_name'],
@@ -35,9 +43,9 @@ class DefaultController extends AppController {
             // TODO create new project object and save it in database
 //            $project = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name']);
 
-            return $this->render('settings-app', ['messages' => $this->message]);
+            return $this->render('settings-app', ['messages' => $this->message, 'user' => $user]);
         }
-        return $this->render('settings-app', ['messages' => $this->message]);
+        return $this->render('settings-app', ['messages' => $this->message, 'user' => $user]);
     }
 
 
