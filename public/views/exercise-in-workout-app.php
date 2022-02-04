@@ -10,8 +10,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="./public/js/script.js" defer></script>
-    <title>Gymlog - Previous logs</title>
+    <title>Gymlog - Programs</title>
 </head>
+
+<?php
+if(!isset($_COOKIE['id'])) {
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/signIn");
+}
+?>
+
 <body>
     <div id="main">
         <header>
@@ -42,7 +50,30 @@
                 <div class="white-background-content">
                     <a href=""><i class="fas fa-arrow-left fa-3x"></i></a>
                     <p id="welcome-title" class="spec-exercise">SPECIFIC EXERCISE</p>
-                    <p class="text specific-exercise">Previous logs</p>
+                    <a class="text specific-exercise" href="">Click here to see recommended warm up!</a>
+                    <textarea name="spec-exercise-description" class="textarea-description" placeholder="exercise description"></textarea>
+                    <p class="text">Enter your set</p>
+                    <form class="set-data">
+                        <div class="set-input-container">
+                            <label for="weight">Weight</label>
+                            <input type="text" name="weight" class="user-data-input">
+                        </div>
+                        <div class="set-input-container">
+                            <label for="reps">Reps</label>
+                            <input type="text" name="reps" class="user-data-input">
+                        </div>
+                        <div class="set-input-container">
+                            <label for="rpe">RPE</label>
+                            <input type="text" name="rpe" class="user-data-input">
+                        </div>
+                        <div class="set-input-container">
+                            <label for="tempo">Tempo</label>
+                            <input type="text" name="tempo" class="user-data-input">
+                        </div>
+                        <button class="red-app-btn">Add set</button>
+                
+                        
+                    </form>
                     <table>
                         <caption>Specific Date</caption>
                         <tr>
@@ -80,125 +111,29 @@
                         <td>8.5</td>
                         <td>21X1</td>
                     </tr>
-                    
-                    </table>
-                    <table>
-                        <caption>Specific Date</caption>
-                        <tr>
-                            <th>No</th>
-                            <th>Weight[kg]</th>
-                            <th>Reps</th>
-                            <th>RPE</th>
-                            <th>Tempo</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>120</td>
-                            <td>4</td>
-                            <td>8.5</td>
-                            <td>21X1</td>
-                        </tr>
-                        <tr>
-                         <td>1</td>
-                         <td>120</td>
-                         <td>4</td>
-                         <td>8.5</td>
-                         <td>21X1</td>
-                     </tr>
-                     <tr>
-                         <td>1</td>
-                         <td>120</td>
-                         <td>4</td>
-                         <td>8.5</td>
-                         <td>21X1</td>
-                     </tr>
-                     <tr>
+                    <tr>
                         <td>1</td>
                         <td>120</td>
                         <td>4</td>
                         <td>8.5</td>
                         <td>21X1</td>
                     </tr>
-                    
-                    </table>
-                    <table>
-                        <caption>Specific Date</caption>
-                        <tr>
-                            <th>No</th>
-                            <th>Weight[kg]</th>
-                            <th>Reps</th>
-                            <th>RPE</th>
-                            <th>Tempo</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>120</td>
-                            <td>4</td>
-                            <td>8.5</td>
-                            <td>21X1</td>
-                        </tr>
-                        <tr>
-                         <td>1</td>
-                         <td>120</td>
-                         <td>4</td>
-                         <td>8.5</td>
-                         <td>21X1</td>
-                     </tr>
-                     <tr>
-                         <td>1</td>
-                         <td>120</td>
-                         <td>4</td>
-                         <td>8.5</td>
-                         <td>21X1</td>
-                     </tr>
-                     <tr>
+                    <tr>
                         <td>1</td>
                         <td>120</td>
                         <td>4</td>
                         <td>8.5</td>
                         <td>21X1</td>
                     </tr>
-                    
-                    </table>
-                    <table>
-                        <caption>Specific Date</caption>
-                        <tr>
-                            <th>No</th>
-                            <th>Weight[kg]</th>
-                            <th>Reps</th>
-                            <th>RPE</th>
-                            <th>Tempo</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>120</td>
-                            <td>4</td>
-                            <td>8.5</td>
-                            <td>21X1</td>
-                        </tr>
-                        <tr>
-                         <td>1</td>
-                         <td>120</td>
-                         <td>4</td>
-                         <td>8.5</td>
-                         <td>21X1</td>
-                     </tr>
-                     <tr>
-                         <td>1</td>
-                         <td>120</td>
-                         <td>4</td>
-                         <td>8.5</td>
-                         <td>21X1</td>
-                     </tr>
-                     <tr>
+                    <tr>
                         <td>1</td>
                         <td>120</td>
                         <td>4</td>
                         <td>8.5</td>
                         <td>21X1</td>
                     </tr>
-                    
                     </table>
+                    <a href="" class="previous-logs text">Check previous logs</a>
 
                 </div>
             </div>

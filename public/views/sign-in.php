@@ -13,30 +13,36 @@
     <title>GymLog - Your simple workout log</title>
 </head>
 <body>
-    <div class="main-signup">
+    <div class="main-signin">
         <header class="header-sign">
-            <a href="#" class="logo"><img src="public/img/logo.svg" alt="GymLog-logo"></a>
+            <a href="/" class="logo"><img src="public/img/logo.svg" alt="GymLog-logo"></a>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="">Features</a></li> 
-                    <li><a href="">Contact</a></li>  
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Features</a></li>
+                    <li><a href="/">Contact</a></li>
                 </ul>
             </nav>
-            <a href="" class="button-home">Sign in</a>
+            <a href="/signIn" class="button-home">Sign in</a>
         </header>
         <div class="sign-content">
+
             <div class="text-content">
-                <p class="sign-text">Set goals and stick to it with us. <span class="bold-text">Join now</span></p>
+                <p class="sign-text"><span class="bold-text">Slow progress</span> is better than no progess</p>
             </div>
-            <form class="sign-form">
-                <input class="user-data-input" type="text" name="name" placeholder="name">
-                <input class="user-data-input" type="text" name="surname" placeholder="surname">
+            <form class="sign-form" action="login" method="POST">
+                <div class="messages">
+                    <?php if(isset($messages)) {
+                        foreach ($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
                 <input class="user-data-input" type="text" name="email" placeholder="email@email.com">
                 <input class="user-data-input" type="password" name="password" placeholder="password">
-                <input class="user-data-input" type="password" name="confirm-password" placeholder="confirm password">
-
-                <a href="#" class="button-home">Sign up</a>
+<!--                <a href="#" class="button-home" type="">Sign in</a>-->
+                <button class="button-home" type="submit">Sign in</button>
             </form>
         </div>
     </div>

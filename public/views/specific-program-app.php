@@ -11,6 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
     <title>Gymlog - Programs</title>
 </head>
+
+<?php
+if(!isset($_COOKIE['id'])) {
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/signIn");
+}
+?>
+
 <body>
     <div id="main">
         <header>
@@ -43,11 +51,14 @@
                 <textarea name="specific-program-description" class="textarea-description" placeholder="workout description"></textarea>
                 <div id="content-programs-container">
                     <div class="cross-programs"></div>
-                    <div class="program-container">A</div>
-                    <div class="program-container">B</div>
-                    <div class="program-container">C</div>
-                    <div class="program-container">D</div>
-                    <div class="program-container">E</div>
+<!--                    <div class="program-container">A</div>-->
+<!--                    <div class="program-container">B</div>-->
+<!--                    <div class="program-container">C</div>-->
+<!--                    <div class="program-container">D</div>-->
+<!--                    <div class="program-container">E</div>-->
+                    <?php foreach ($workouts as $workout):  ?>
+                        <div class="program-container"><?= $workout->getName() ?></div>
+                    <?php endforeach; ?>
                     
                     
                 </div>
@@ -68,7 +79,7 @@
                     </div>
                     <div class="settings-element">
                         <i class="fas fa-sign-out-alt fa-2x"></i>
-                        <a class= "nav-li" href="#">Logout</a>
+                        <a class= "nav-li" id="logout" href="logout">Logout</a>
                     </div>
                 </div>
             </div>

@@ -9,8 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
-    <title>Gymlog - Programs</title>
+    
+    <title>Gymlog - Add exercise</title>
 </head>
+
+<?php
+if(!isset($_COOKIE['id'])) {
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/signIn");
+}
+?>
+
 <body>
     <div id="main">
         <header>
@@ -38,18 +47,24 @@
         </header>
         <section>
             <div id="div-for-content-1part">
-                <p class="title">Programs</p>
-                <div id="content-programs-container">
-                    <div class="cross-programs"></div>
-                    <div class="program-container">FBW</div>
-                    <div class="program-container">5/3/1 Wendler</div>
-                    <div class="program-container">Push Pull Legs</div>
-                    <div class="program-container">Gym Bro split</div>
-                    <div class="program-container">Other</div>
+                <div class="white-background-content">
+                    <p id="welcome-title">Add exercise</p>
+                    <form class="add-form">
+                        <input class="user-data-input" name="exercise-name" type="text" placeholder="exercise name">
+                        <textarea name="exercise-description" class="textarea-description" placeholder="description"></textarea>
+<!--                        <select class="minimal">-->
+<!--                            <option>Select category</option>-->
+<!--                            <option>Chest</option>-->
+<!--                            <option>Back</option>-->
+<!--                            <option>Legs</option>-->
+<!--                            <option>Glutes</option>-->
+<!--                          </select>-->
+                        <button class="red-app-btn">Add</button>
+                    </form>
+
                     
-                    
+
                 </div>
-                
             </div>
             <div id="div-for-content-2part">
                 <div id="user-data-photo">

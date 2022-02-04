@@ -11,6 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
     <title>Gymlog - Programs</title>
 </head>
+
+<?php
+if(!isset($_COOKIE['id'])) {
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/signIn");
+}
+?>
+
+
 <body>
     <div id="main">
         <header>
