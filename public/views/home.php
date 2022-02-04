@@ -15,15 +15,15 @@
 <body>
     <div id="main">
         <header id="index-header">
-            <a href="#" class="logo"><img src="public/img/logo.svg" alt="GymLog-logo"></a>
+            <a href="/" class="logo"><img src="public/img/logo.svg" alt="GymLog-logo"></a>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="">Features</a></li> 
-                    <li><a href="">Contact</a></li>  
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Features</a></li>
+                    <li><a href="/">Contact</a></li>
                 </ul>
             </nav>
-            <a href="#" class="button-home">Sign in</a>
+            <a href="/signIn" class="button-home">Sign in</a>
         </header>
         <section>
             <div class="first-container">
@@ -31,7 +31,7 @@
                     <div id="content">
                         <span id="sub-text">log it or leave it</span>
                         <p id="text">Start tracking your <span id="bold-text">progress</span></p>
-                        <a href="#" class="button-home">Sign up</a>
+                        <a href="/signUp" class="button-home">Sign up</a>
                     </div>
                 </div>
                 
@@ -86,9 +86,9 @@
         <div class="contact">
             <span id="footer-title">Contact</span>
             <div class="socials">
-                <a href="#" id="fb"><i class="fab fa-facebook fa-3x"></i></a>
-                <a href="" id="ig"><i class="fab fa-instagram fa-3x"></i></i></a>
-                <a href="#" id="github"><i class="fa fa-github fa-3x"></i></a>
+                <a href="https://www.facebook.com/dawid.wrobel.777/" id="fb"><i class="fab fa-facebook fa-3x"></i></a>
+                <a href="https://www.instagram.com/dwrb21/" id="ig"><i class="fab fa-instagram fa-3x"></i></i></a>
+                <a href="https://github.com/wrobel2131" id="github"><i class="fa fa-github fa-3x"></i></a>
             </div>   
         </div>
 

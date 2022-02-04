@@ -9,8 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
-    <title>Gymlog - Programs</title>
+    <script type="text/javascript" src="./public/js/script.js" defer></script>
+    <title>Gymlog - Add workout</title>
 </head>
+
+
+<?php
+if(!isset($_COOKIE['id'])) {
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/signIn");
+}
+?>
+
 <body>
     <div id="main">
         <header>
@@ -23,34 +33,32 @@
                     </li>
                     <li>
                         <i class="fas fa-clipboard-list fa-2x"></i>
-                        <a class="nav-li" href="">Programs</a>
+                        <a class="nav-li" href="/appPrograms">Programs</a>
                     </li>
                     <li>
                         <i class="fas fa-dumbbell fa-2x"></i>
-                        <a class="nav-li" href="">Exercises</a>
+                        <a class="nav-li" href="/appExercises">Exercises</a>
                     </li>
                     <li>
                         <i class="fas fa-calculator fa-2x"></i>
-                        <a class="nav-li" href="">1 Rep Max Calculator</a>
+                        <a class="nav-li" href="/appCalculator">1 Rep Max Calculator</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <section>
             <div id="div-for-content-1part">
-                <a class="specific-program" href=""><i class="fas fa-arrow-left fa-3x"></i></a>
-                <p class="title">Specific Workout</p>
-                <div id="content-exercises-container">
-                    <div id="cross-exercises"></div>
-                    <div class="exercise-container">Barbell Bench Press</div>
-                    <div class="exercise-container">Squat</div>
-                    <div class="exercise-container">OHP</div>
-                    <div class="exercise-container">Incline dumbell press</div>
-                    <div class="exercise-container">Bulgarian Squat</div>
+                <div class="white-background-content">
+                    <a href=""><i class="fas fa-arrow-left fa-3x"></i></a>
+                    <p id="welcome-title">Add workout</p>
+                    <form class="add-form" action="addWorkoutToProgram" method="POST">
+                        <input class="user-data-input" name="workout-name" type="text" placeholder="workout name">
+                        <button class="red-app-btn" type="submit">Add</button>
+                    </form>
 
                     
+
                 </div>
-                
             </div>
             <div id="div-for-content-2part">
                 <div id="user-data-photo">

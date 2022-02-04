@@ -9,8 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
-    <title>Gymlog - Exercises</title>
+    <title>Gymlog - Programs</title>
 </head>
+
+<?php
+if(!isset($_COOKIE['id'])) {
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/signIn");
+}
+?>
+
 <body>
     <div id="main">
         <header>
@@ -38,7 +46,8 @@
         </header>
         <section>
             <div id="div-for-content-1part">
-                <p class="title">Exercises</p>
+                <a class="specific-program" href=""><i class="fas fa-arrow-left fa-3x"></i></a>
+                <p class="title">Specific Workout</p>
                 <div id="content-exercises-container">
                     <div id="cross-exercises"></div>
                     <div class="exercise-container">Barbell Bench Press</div>
@@ -66,7 +75,7 @@
                     </div>
                     <div class="settings-element">
                         <i class="fas fa-sign-out-alt fa-2x"></i>
-                        <a class= "nav-li" href="#">Logout</a>
+                        <a class= "nav-li" href="logout">Logout</a>
                     </div>
                 </div>
             </div>
